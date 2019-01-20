@@ -67,7 +67,7 @@ class HomeController extends Controller
             $tasks_private = $tasks_private->merge($tasks_private_p);
 
         }else{
-            session()->flash("error", "Access denied");
+            session()->flash("error", "Access denied.");
             return back();
         }
         $tasks = $tasks_public->merge($tasks_private)->sortByDesc('id');

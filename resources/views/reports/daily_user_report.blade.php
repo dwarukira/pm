@@ -32,7 +32,7 @@
                 @foreach($assigned_tasks as $task)
                     <tr>
                         <td>{{ $task->name }}</td>
-                        <td>{{ \Carbon\Carbon::parse($task->due_date)->format('d-m-Y') }}</td>
+                        <td>{{ \Carbon\Carbon::parse($task->due_date)->format('m-d-Y') }}</td>
                         <td>{{ $task->status }}</td>
                         <td>@if($task->latest_progress)
                                 {{ $task->latest_progress->progress }}%
